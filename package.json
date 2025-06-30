@@ -5,6 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "compile": "tsc",
+    "db-schema": "node --env-file=.env ./dist/db-schema.js",
+    "db-seed": "node --env-file=.env ./dist/db-seed.js",
     "start": "npm run compile && node ./dist/index.js"
   },
   "keywords": [],
@@ -13,6 +15,7 @@
   "type": "module",
   "dependencies": {
     "@apollo/server": "^4.12.0",
+    "better-sqlite3": "^12.2.0",
     "graphql": "^16.10.0"
   },
   "devDependencies": {
